@@ -1,0 +1,465 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #081b29;
+    color: #ededed;
+} 
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+    background-color: #081b29; 
+    position: relative;
+    padding: 20px;
+}
+
+.navbar {
+    width: 100%;
+    height: 80px;
+    background-color: #081b29;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+.navleft {
+    font-size: 25px;
+    color: aliceblue;
+    font-weight: 600;
+}
+
+.navright {
+    padding: 10px;
+    font-size: 1rem;
+    display: flex;
+    gap: 10px;
+}
+
+.navright a {
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 15px;
+}
+
+.Home {
+    height: 100vh;
+    padding: 0 10%;
+    display: flex;
+    align-items: start;
+    margin-top: 10px;
+    position: relative;
+    gap: 5px;
+    top: 100px;
+}
+
+.Home-Content {
+    max-width: 550px;
+}
+
+.Home-Content h1 {
+    font-size: 56px;
+    font-weight: 700;
+    color: #ededed;
+}
+
+.Home-Content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #ededed;
+}
+
+.Home-Content h3 span {
+    font-size: 32px;
+    font-weight: 700;
+    color: #00abf0;
+}
+
+.Home-Content p {
+    font-size: 16px;
+    color: #ededed;
+    font-weight: 400;
+}
+
+.Homeid {
+    position: absolute;
+    left: 85px;
+    bottom: 60px;
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 50px;
+    align-items: center;
+}
+
+.Homeid a {
+    position: relative;
+    height: 40px;
+    width: 40px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: 2px solid #00abf0;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #00abf0;
+    text-decoration: none;
+    padding: 1px;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.Homeid a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    transition: 0.5s;
+    background-color: #4ac5f5;
+}
+
+.Homeid a:hover {
+    color: #081b29;
+}
+
+.Homeid a:hover::before {
+    width: 100%;
+}
+
+.imgright {
+    position: absolute;
+    right: 2px;
+    top: -20px;
+    height: 60%;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgright img {
+    height: 100%;
+    width: auto;
+    max-width: 400px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px #4ac5f5;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #081b29;
+    padding: 20px;
+    color: #ededed;
+}
+
+/* About Section Styles */
+#About {
+    padding: 50px 20px;
+    background-color: #0a2c4a; /* Optional background color for contrast */
+    text-align: center;
+}
+
+#About h2 {
+    font-size: 36px;
+    color: #ededed;
+    margin-bottom: 20px;
+}
+
+.about-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #081b29;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.about-box p {
+    font-size: 16px;
+    color: #ededed;
+    line-height: 1.6;
+}
+
+/* Education Section Styles */
+#Education {
+    padding: 50px 20px;
+    background-color: #0a2c4a;
+    text-align: center;
+}
+
+#Education h2 {
+    font-size: 36px;
+    color: #ededed;
+    margin-bottom: 20px;
+}
+
+.education-box {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #081b29;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    gap: 20px;
+}
+
+.education-item {
+    margin-bottom: 20px;
+}
+
+.education-item img.logo {
+    max-width: 100px;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px auto;
+}
+
+.education-item h4 {
+    font-size: 22px;
+    color: #00abf0;
+}
+
+.education-item p {
+    font-size: 16px;
+    color: #ededed;
+}
+
+/* Skills Section Styles */
+#Skills {
+    padding: 50px 20px;
+    background-color: #0a2c4a;
+    text-align: center;
+}
+
+#Skills h2 {
+    font-size: 36px;
+    color: #ededed;
+    margin-bottom: 20px;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.skills-box {
+    background-color: #081b29;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    flex: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skills-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.skills-box h3 {
+    font-size: 24px;
+    color: #ededed;
+    margin-bottom: 10px;
+}
+
+.skills-box p {
+    font-size: 30px;
+    color: #ededed;
+    list-style: none;
+}
+
+/* Contact Section Styles */
+#Contact {
+    padding: 50px 20px;
+    background-color: #0a2c4a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+#Contact h2 {
+    font-size: 36px;
+    color: #ededed;
+    margin-bottom: 20px;
+}
+
+.contact-container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.contact-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.contact-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: #081b29;
+    gap: 20px;
+    font-size: 18px;
+    color: #ededed;
+}
+
+.contact-form {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-form label {
+    font-size: 18px;
+    color: #ededed;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 10px;
+    border: 1px solid #00abf0;
+    border-radius: 4px;
+    background-color: #081b29;
+    color: #ededed;
+    font-size: 16px;
+}
+
+.contact-form button {
+    padding: 10px;
+    border: none;
+    background-color: #00abf0;
+    color: #081b29;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #0090d0;
+    transform: scale(1.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .Home {
+        padding: 0 5%;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+   
+    .contact-form button:hover {
+        background-color: #009cd3;
+        transform: scale(1.05);
+    }
+    
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+        .Home {
+            padding: 0 5%;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .imgright {
+            position: static;
+            height: 40%;
+            width: 80%;
+        }
+    
+        .navbar {
+            height: auto;
+            flex-direction: column;
+            padding: 10px;
+        }
+    
+        .navright {
+            gap: 5px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    
+        .skills-container {
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .contact-container {
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .education-box, .about-box {
+            padding: 10px;
+        }
+    
+        .skills-box {
+            width: 100%;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .Home-Content h1 {
+            font-size: 36px;
+        }
+    
+        .Home-Content h3 {
+            font-size: 24px;
+        }
+    
+        .navleft {
+            font-size: 20px;
+        }
+    
+        .navright a {
+            font-size: 14px;
+        }
+    
+        .contact-form input, .contact-form textarea {
+            font-size: 14px;
+        }
+    
+        .contact-form button {
+            font-size: 16px;
+        }
+    }
+    

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Project</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        /* Smooth scrolling for navigation */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Initially hide all sections except Home */
+        #About, #Education, #Skills, #Contact {
+            display: none;
+        }
+        /* Style the navbar */
+        .navbar {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            background-color: #081b29;
+            color: #fff;
+            padding: 10px;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+        }
+        /* Other general styling */
+        .container {
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Navbar -->
+        <header class="navbar">
+            <nav id="bar">
+                <div class="navleft">PORTFOLIO</div>
+                <div class="navright">
+                    <a href="#" onclick="showSection('Home')">Home</a>
+                    <a href="#" onclick="showSection('About')">About</a>
+                    <a href="#" onclick="showSection('Education')">Education</a>
+                    <a href="#" onclick="showSection('Skills')">Skills</a>
+                    <a href="#" onclick="showSection('Contact')">Contact Me</a>
+                </div>
+            </nav>  
+        </header>
+        
+        <!-- Home Section -->
+        <main>
+            <section id="Home" class="Home">
+                <div class="Home-Content">
+                    <h1>Hi, I am Arham</h1>
+                    <h3>Currently a B-Tech student of <span>Artificial Intelligence and Machine Learning</span></h3>
+                    <p>Welcome to my portfolio! I'm Arham Ali, a BTech Undergraduate in Artificial Intelligence and Machine Learning eager to master MERN stack development. I’m focused on building real-world projects and transforming innovative ideas into practical solutions. Explore my journey!</p>
+                </div>
+                <div class="imgright">
+                    <img src="profile1.png" alt="Profile picture of Arham Ali">
+                </div>
+            </section>
+            
+            <!-- About Section -->
+            <section id="About">
+                <h2>About</h2>
+                <div class="about-box">
+                <p> Hello! I'm Arham Ali, a passionate second-year B-Tech student at the University School of Automation (USAR), specializing in Artificial Intelligence and Machine Learning. My enthusiasm for coding drives me to explore various programming languages, with a current focus on Java. I am dedicated to developing innovative solutions using the MERN stack, aligning with my passion for technology. My academic journey and personal projects reflect my commitment to mastering the skills needed to tackle real-world challenges effectively.
+                    I thrive on continuous learning and problem-solving, always seeking new ways to apply my knowledge and enhance my expertise. This portfolio is a testament to my skills and educational journey. I invite you to explore my work and connect with me for potential collaborations or opportunities. Thank you for taking the time to visit and review my portfolio!
+                    <br>
+                    <br>
+                    <span>For more detailed information, you can check my LinkedIn profile.</span>
+                </p>
+                </div>
+            </section>
+            
+            <!-- Education Section -->
+            <section id="Education">
+                <h2>Education</h2>
+                <div class="education-box">
+                    <h3>My Educational Journey</h3>
+                    <div class="education-item">
+                        <img src="bbps.png" alt="Bal Bhavan Public School Logo" class="logo">
+                        <h4>Bal Bhavan Senior Secondary Public School(2011 - 2023)</h4>
+                        <p>Completed my schooling with a strong focus on academics...</p>
+                    </div>
+                    <div class="education-item">
+                        <img src="ggsipu.png" alt="Guru Gobind Singh Indraprastha University Logo" class="logo">
+                        <h4>Guru Gobind Singh Indraprastha University(2023 - 2027)</h4>
+                        <p> Achieved a CGPA of 8.6 in the first year...</p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Skills Section -->
+            <section id="Skills">
+                <h2>Skills</h2>
+                <div class="skills-container">
+                    <div class="skills-box web-skills">
+                        <h3>Web Skills</h3>
+                        <ul>
+                            <li>HTML</li><li>CSS</li><li>JavaScript</li><li>React</li><li>Node.js</li><li>Express.js</li><li>MongoDB</li><li>SQL</li>
+                        </ul>
+                    </div>
+                    <div class="skills-box programming">
+                        <h3>Programming Skills</h3>
+                        <ul>
+                            <li>C Language</li><li>Python</li><li>Java</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="Contact">
+                <h2>Contact Me</h2>
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <div class="contact-item"><i class='bx bxs-phone'></i><p>+91 XXXXXXXXXX</p></div>
+                        <div class="contact-item"><i class='bx bxs-envelope'></i><p>ABC@gmail.com</p></div>
+                    </div>
+                    <form class="contact-form">
+                        <label for="name">Name:</label><input type="text" id="name" name="name" required>
+                        <label for="email">Email:</label><input type="email" id="email" name="email" required>
+                        <label for="message">Message:</label><textarea id="message" name="message" rows="5" required></textarea>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <p>2024 Arham. All Rights Reserved</p>
+        </footer>
+    </div>
+
+    <!-- JavaScript to toggle section visibility -->
+    <script>
+        function showSection(sectionId) {
+            const sections = ['Home', 'About', 'Education', 'Skills', 'Contact'];
+            sections.forEach(id => {
+                document.getElementById(id).style.display = (id === sectionId) ? 'block' : 'none';
+            });
+        }
+        document.addEventListener("DOMContentLoaded", () => {
+    // Select all sections and navigation links
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".navright a");
+
+    // Initially show only the Home section
+    sections.forEach((section) => {
+        section.style.display = section.id === "Home" ? "block" : "none";
+    });
+
+    // Add click event to each navigation link
+    navLinks.forEach((link) => {
+        link.addEventListener("click", (event) => {
+            event.preventDefault(); // Prevent default anchor behavior
+            const targetSection = document.querySelector(link.getAttribute("href"));
+
+            // Hide all sections except the selected one
+            sections.forEach((section) => {
+                section.style.display = "none";
+            });
+            targetSection.style.display = "block";
+
+            // Update active link style
+            navLinks.forEach((nav) => nav.classList.remove("active"));
+            link.classList.add("active");
+        });
+    });
+});
+
+    </script>
+</body>
+</html>
